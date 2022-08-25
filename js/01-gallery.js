@@ -49,15 +49,12 @@ function onGalleryItemClick(event) {
 
     console.log(modalWindow);
 
-   
 
     modalWindow.setAttribute("src", refToLargeImage);
     modalWindow.setAttribute("alt", descImage);
-    // modalWindow.addEventListener('click', closeModal());
 
-    // function closeModal() {
-    //     return modalWindow.remove();
-    // };
+
+    modalWindow.addEventListener('click', event =>  instance.close());
 
 }
 
