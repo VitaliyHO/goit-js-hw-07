@@ -54,7 +54,15 @@ function onGalleryItemClick(event) {
     modalWindow.setAttribute("alt", descImage);
 
 
-    modalWindow.addEventListener('click', event =>  instance.close());
+    modalWindow.addEventListener('click', () =>  instance.close());
+    window.addEventListener('keydown', (event) => {
+        if(event.keyCode === 27){
+            instance.close()
+        }
+    });
+
+    
+
 
 }
 
