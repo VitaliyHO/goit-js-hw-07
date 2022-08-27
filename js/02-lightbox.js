@@ -19,13 +19,4 @@ function createGallery(galleryArr) {
     }).join('');
 };
 
-gallery.addEventListener('click', toImageClick);
-
-function toImageClick(event) {
-    event.preventDefault();
-    if(event.target.nodeName !== 'IMG'){
-        return;
-    }
-};
-
 new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: '250' });
